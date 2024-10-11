@@ -27,29 +27,33 @@
             </div>
 
             <!-- Roles Table -->
-            <div class="bg-white shadow-md rounded my-6">
+            <div class="bg-white shadow-md rounded my-6 overflow-x-auto">
                 <table class="min-w-full bg-white">
                     <thead class="bg-gray-800 text-white">
                         <tr>
-                            <th class="w-1/12 py-3 px-4 uppercase font-semibold text-sm">Role ID</th>
-                            <th class="w-1/4 py-3 px-4 uppercase font-semibold text-sm">Role Name</th>
-                            <th class="w-1/3 py-3 px-4 uppercase font-semibold text-sm">Role Description</th>
-                            <th class="w-1/6 py-3 px-4 uppercase font-semibold text-sm">Role Status</th>
-                            <th class="w-1/6 py-3 px-4 uppercase font-semibold text-sm">Actions</th>
+                            <th class="w-1/12 py-4 px-6 uppercase font-semibold text-sm text-left">Role ID</th>
+                            <th class="w-1/4 py-4 px-6 uppercase font-semibold text-sm text-left">Role Name</th>
+                            <th class="w-1/3 py-4 px-6 uppercase font-semibold text-sm text-left">Role Description</th>
+                            <th class="w-1/5 py-4 px-6 uppercase font-semibold text-sm text-left">Role Salary</th>
+                            <th class="w-1/6 py-4 px-6 uppercase font-semibold text-sm text-left">Role Status</th>
+                            <th class="w-1/6 py-4 px-6 uppercase font-semibold text-sm text-left">Actions</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-700">
-                        <?php foreach ($obj_role as $role){ ?>
-                        <tr class="text-center">
-                            <td class="py-3 px-4 text-blue-600"><?php echo htmlspecialchars($role->role_id); ?></td>
-                            <td class="w-1/4 py-3 px-4php"><? echo htmlspecialchars($role->role_name); ?></td>
-                            <td class="w-1/3 py-3 px-4"><?php echo htmlspecialchars($role->role_description); ?></td>
-                            <td class="w-1/6 py-3 px-4">
+                        <?php foreach ($obj_role as $role) { ?>
+                        <tr class="border-b">
+                            <td class="py-4 px-6 text-blue-600"><?php echo htmlspecialchars($role->role_id); ?></td>
+                            <td class="py-4 px-6"><?php echo htmlspecialchars($role->role_name); ?></td>
+                            <td class="py-4 px-6"><?php echo htmlspecialchars($role->role_description); ?></td>
+                            <td class="py-4 px-6"><?php echo htmlspecialchars($role->role_salary); ?></td>
+                            <td class="py-4 px-6">
                                 <?php echo $role->role_status == 1 ? 'Active' : 'Inactive'; ?>
                             </td>
-                            <td class="w-1/6 py-3 px-4">
-                                <a href="#" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded mr-2">Update</a>
-                                <a href="#" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Delete</a>
+                            <td class="py-4 px-6">
+                                <div class="inline-flex space-x-2">
+                                    <a href="#" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 rounded">Update</a>
+                                    <a href="#" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded">Delete</a>
+                                </div>
                             </td>
                         </tr>
                         <?php } ?>

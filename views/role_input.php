@@ -34,6 +34,12 @@
                         <textarea id="role_description" name="role_description" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Masukkan Deskripsi Role" rows="3" required></textarea>
                     </div>
 
+                    <!-- Role Salary -->
+                    <div class="mb-4">
+                        <label for="role_salary" class="block text-gray-700 text-sm font-bold mb-2">Role Salary:</label>
+                        <input type="number" id="role_salary" name="role_salary" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Masukkan Gaji Role" required>
+                    </div>
+
                     <!-- Role Status -->
                     <div class="mb-4">
                         <label for="role_status" class="block text-gray-700 text-sm font-bold mb-2">Role Status:</label>
